@@ -8,11 +8,14 @@ type Props = {
 };
 
 const GameCard = ({ game }: Props) => {
+  const [title, subTitle] = game.name.split(':');
+
   return (
     <Card borderRadius={10} overflow="hidden">
       <Image src={game.background_image} />
       <CardBody>
-        <Heading fontSize="2xl">{game.name}</Heading>
+        <Heading fontSize="2xl">{title}</Heading>
+        {subTitle && <Heading fontSize="1xl">{subTitle}</Heading>}
         <HStack justifyContent="space-between">
           <PlatformIconList
             platforms={game.parent_platforms.map((p) => p.platform)}
