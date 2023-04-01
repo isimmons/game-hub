@@ -3,6 +3,7 @@ export type Game = {
   name: string;
   background_image: string;
   parent_platforms: { platform: GamePlatform }[];
+  metacritic: number;
 };
 
 export type GamePlatform = {
