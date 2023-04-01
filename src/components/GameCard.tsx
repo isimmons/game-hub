@@ -3,6 +3,8 @@ import type { Game } from '~/@types/games';
 import CriticScore from './CriticScore';
 import PlatformIconList from './PlatformIconList';
 
+import getCroppedImageUrl from '~/services/image-url';
+
 type Props = {
   game: Game;
 };
@@ -12,7 +14,7 @@ const GameCard = ({ game }: Props) => {
 
   return (
     <Card borderRadius={10} overflow="hidden">
-      <Image src={game.background_image} />
+      <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <Heading fontSize="2xl">{title}</Heading>
         {subTitle && <Heading fontSize="1xl">{subTitle}</Heading>}
