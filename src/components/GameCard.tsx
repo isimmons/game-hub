@@ -13,7 +13,7 @@ const GameCard = ({ game }: Props) => {
   const [title, subTitle] = game.name.split(':');
 
   return (
-    <Card borderRadius={10} overflow="hidden" width="300px">
+    <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <Heading fontSize="2xl">{title}</Heading>
