@@ -5,13 +5,13 @@ import {
   List,
   ListItem,
   Spinner,
-  Text,
 } from '@chakra-ui/react';
+
 import useGenres from '~/hooks/useGenres';
 import getCroppedImageUrl from '~/services/image-url';
 
 import type { MouseEvent } from 'react';
-import type { Genre } from '~/@types/games';
+import type { Genre } from '~/@types';
 
 type Props = {
   onSelectGenre: (genre: Genre) => void;

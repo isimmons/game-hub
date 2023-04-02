@@ -1,6 +1,6 @@
 import useData from './useData';
 
-import type { Genre } from '~/@types/games';
+import type { Genre } from '~/@types';
 
 const useGenres = () => useData<Genre>('/genres');
 

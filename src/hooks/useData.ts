@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+
 import apiClient, { CanceledError } from '~/services/api-client';
 
 import type { AxiosRequestConfig } from 'axios';
-import type { FetchResponse } from '~/@types/games';
+import type { FetchResponse } from '~/@types';
 
 const useData = <T>(
   endpoint: string,

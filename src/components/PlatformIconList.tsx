@@ -12,7 +12,7 @@ import { BsGlobe } from 'react-icons/bs';
 import { HStack, Icon } from '@chakra-ui/react';
 
 import type { IconType } from 'react-icons/lib/esm/iconBase';
-import type { GamePlatform } from '~/@types/games';
+import type { GamePlatform } from '~/@types';
 
 type Props = {
   platforms: GamePlatform[];

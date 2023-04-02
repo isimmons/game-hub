@@ -5,7 +5,7 @@ import GameCard from './GameCard';
 import GameCardContainer from './GameCardContainer';
 import GameCardSkeleton from './GameCardSkeleton';
 
-import type { Genre } from '~/@types/games';
+import type { Genre } from '~/@types';
 
 type Props = {
   selectedGenre: Genre | null;
