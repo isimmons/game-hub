@@ -1,10 +1,10 @@
 import useData from './useData';
 
-import type { Game, GamePlatform, Genre } from '~/@types';
+import type { Game, Platform, Genre } from '~/@types';
 
 const useGames = (
   selectedGenre: Genre | null,
-  selectedPlatform: GamePlatform | null
+  selectedPlatform: Platform | null
 ) =>
   useData<Game>(
     '/games',

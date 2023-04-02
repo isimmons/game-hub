@@ -5,11 +5,11 @@ import GameCard from './GameCard';
 import GameCardContainer from './GameCardContainer';
 import GameCardSkeleton from './GameCardSkeleton';
 
-import type { GamePlatform, Genre } from '~/@types';
+import type { Platform, Genre } from '~/@types';
 
 type Props = {
   selectedGenre: Genre | null;
-  selectedPlatform: GamePlatform | null;
+  selectedPlatform: Platform | null;
 };
 
 const GameGrid = ({ selectedGenre, selectedPlatform }: Props) => {

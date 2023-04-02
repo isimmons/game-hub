@@ -4,11 +4,11 @@ import { BsChevronDown } from 'react-icons/bs';
 import usePlatforms from '~/hooks/usePlatforms';
 
 import type { MouseEvent } from 'react';
-import type { GamePlatform } from '~/@types';
+import type { Platform } from '~/@types';
 
 type Props = {
-  onSelectPlatform: (platform: GamePlatform) => void;
-  selectedPlatform: GamePlatform | null;
+  onSelectPlatform: (platform: Platform) => void;
+  selectedPlatform: Platform | null;
 };
 
 const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
@@ -16,12 +16,11 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
 
   if (error) return null;
 
-  const handleSelectPlatform =
-    (platform: GamePlatform) => (event: MouseEvent) => {
-      event.preventDefault();
+  const handleSelectPlatform = (platform: Platform) => (event: MouseEvent) => {
+    event.preventDefault();
 
-      onSelectPlatform(platform);
-    };
+    onSelectPlatform(platform);
+  };
 
   return (
     <Menu>
