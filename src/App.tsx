@@ -24,6 +24,10 @@ function App() {
     setGameQuery({ ...gameQuery, sortOrder });
   };
 
+  const handleSearch = (searchText: string) => {
+    setGameQuery({ ...gameQuery, searchText });
+  };
+
   return (
     <Grid
       templateAreas={{
@@ -36,7 +40,7 @@ function App() {
       }}
     >
       <GridItem area="nav">
-        <NavBar />
+        <NavBar onSearch={handleSearch} />
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
