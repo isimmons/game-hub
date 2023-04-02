@@ -4,7 +4,6 @@ import { BsChevronDown } from 'react-icons/bs';
 import usePlatforms from '~/hooks/usePlatforms';
 
 import type { MouseEvent } from 'react';
-import type { Platform } from '~/@types';
 
 type Props = {
   onSelectPlatform: (platform: Platform) => void;

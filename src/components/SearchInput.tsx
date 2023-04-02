@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { BsSearch } from 'react-icons/bs';
 
-import type { FormEvent, ChangeEvent } from 'react';
+import type { FormEvent } from 'react';
 
 type Props = {
   onSearch: (query: string) => void;

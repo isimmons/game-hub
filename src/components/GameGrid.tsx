@@ -5,8 +5,6 @@ import GameCard from './GameCard';
 import GameCardContainer from './GameCardContainer';
 import GameCardSkeleton from './GameCardSkeleton';
 
-import type { GameQuery } from '~/@types';
-
 type Props = {
   gameQuery: GameQuery;
 };

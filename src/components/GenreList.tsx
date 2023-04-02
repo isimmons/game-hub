@@ -11,7 +11,6 @@ import useGenres from '~/hooks/useGenres';
 import getCroppedImageUrl from '~/services/image-url';
 
 import type { MouseEvent } from 'react';
-import type { Genre } from '~/@types';
 
 type Props = {
   onSelectGenre: (genre: Genre) => void;

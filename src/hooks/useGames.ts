@@ -1,7 +1,5 @@
 import useData from './useData';
 
-import type { Game, GameQuery } from '~/@types';
-
 const useGames = (gameQuery: GameQuery) =>
   useData<Game>(
     '/games',

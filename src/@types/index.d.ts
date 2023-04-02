@@ -1,10 +1,10 @@
-export type Platform = {
+type Platform = {
   id: number;
   name: string;
   slug: string;
 };
 
-export type Game = {
+type Game = {
   id: number;
   name: string;
   background_image: string;
@@ -12,20 +12,20 @@ export type Game = {
   metacritic: number;
 };
 
-export type Genre = {
+type Genre = {
   id: number;
   name: string;
   image_background: string;
 };
 
-export type GameQuery = {
+type GameQuery = {
   genre: Genre;
   platform: Platform;
   sortOrder: string;
   searchText: string;
 };
 
-export type FetchResponse<T> = {
+type FetchResponse<T> = {
   count: number;
   results: T[];
 };
