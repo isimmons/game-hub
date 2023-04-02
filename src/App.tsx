@@ -20,6 +20,10 @@ function App() {
     setGameQuery({ ...gameQuery, platform });
   };
 
+  const handleOrderBy = (sortOrder: string) => {
+    setGameQuery({ ...gameQuery, sortOrder });
+  };
+
   return (
     <Grid
       templateAreas={{
@@ -48,7 +52,10 @@ function App() {
             onSelectPlatform={handleSelectPlatform}
             selectedPlatform={gameQuery.platform}
           />
-          <SortSelector />
+          <SortSelector
+            sortOrder={gameQuery.sortOrder}
+            onOrderBy={handleOrderBy}
+          />
         </HStack>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>

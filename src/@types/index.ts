@@ -21,6 +21,7 @@ export type Genre = {
 export type GameQuery = {
   genre: Genre;
   platform: Platform;
+  sortOrder: string;
 };
 
 export type FetchResponse<T> = {
