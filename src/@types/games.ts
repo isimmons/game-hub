@@ -15,6 +15,7 @@ export type Game = {
 export type Genre = {
   id: number;
   name: string;
+  image_background: string;
 };
 
 export type FetchResponse<T> = {
