@@ -18,6 +18,11 @@ export type Genre = {
   image_background: string;
 };
 
+export type GameQuery = {
+  genre: Genre;
+  platform: Platform;
+};
+
 export type FetchResponse<T> = {
   count: number;
   results: T[];
