@@ -1,13 +1,34 @@
-import { HStack, Image, List, ListItem, Spinner, Text } from '@chakra-ui/react';
+import {
+  Button,
+  HStack,
+  Image,
+  List,
+  ListItem,
+  Spinner,
+  Text,
+} from '@chakra-ui/react';
 import useGenres from '~/hooks/useGenres';
 import getCroppedImageUrl from '~/services/image-url';
 
-const GenreList = () => {
+import type { MouseEvent } from 'react';
+import type { Genre } from '~/@types/games';
+
+type Props = {
+  onSelectGenre: (genre: Genre) => void;
+};
+
+const GenreList = ({ onSelectGenre }: Props) => {
   const { data: genres, error, isLoading } = useGenres();
 
   if (error) return null;
 
   if (isLoading) return <Spinner />;
+
+  const handleSelectGenre = (genre: Genre) => (event: MouseEvent) => {
+    event.preventDefault();
+
+    onSelectGenre(genre);
+  };
 
   return (
     <List>
@@ -19,7 +40,13 @@ const GenreList = () => {
               borderRadius={8}
               src={getCroppedImageUrl(genre.image_background)}
             />
-            <Text fontSize="lg">{genre.name}</Text>
+            <Button
+              onClick={handleSelectGenre(genre)}
+              variant="link"
+              fontSize="lg"
+            >
+              {genre.name}
+            </Button>
           </HStack>
         </ListItem>
       ))}
