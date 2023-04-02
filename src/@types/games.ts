@@ -16,3 +16,13 @@ export type FetchGamesResponse = {
   count: number;
   results: Game[];
 };
+
+export type Genre = {
+  id: number;
+  name: string;
+};
+
+export type FetchGenresResponse = {
+  count: number;
+  results: Genre[];
+};
