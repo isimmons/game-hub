@@ -1,3 +1,9 @@
+export type GamePlatform = {
+  id: number;
+  name: string;
+  slug: string;
+};
+
 export type Game = {
   id: number;
   name: string;
@@ -6,23 +12,12 @@ export type Game = {
   metacritic: number;
 };
 
-export type GamePlatform = {
-  id: number;
-  name: string;
-  slug: string;
-};
-
-export type FetchGamesResponse = {
-  count: number;
-  results: Game[];
-};
-
 export type Genre = {
   id: number;
   name: string;
 };
 
-export type FetchGenresResponse = {
+export type FetchResponse<T> = {
   count: number;
-  results: Genre[];
+  results: T[];
 };
