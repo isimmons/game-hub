@@ -4,7 +4,7 @@ import apiClient from '~/services/api-client';
 import genres from '~/data/genres';
 
 const useGenres = () =>
-  useQuery({
+  useQuery<FetchResponse<Genre>, Error>({
     queryKey: ['genres'],
     queryFn: () =>
       apiClient.get<FetchResponse<Genre>>('/genres').then((res) => res.data),

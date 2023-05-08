@@ -4,7 +4,7 @@ import apiClient from '~/services/api-client';
 import platforms from '~/data/platforms';
 
 const usePlatforms = () =>
-  useQuery({
+  useQuery<FetchResponse<Platform>, Error>({
     queryKey: ['platforms'],
     queryFn: () =>
       apiClient
