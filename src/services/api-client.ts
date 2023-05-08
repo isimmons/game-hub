@@ -1,5 +1,10 @@
 import axios, { type AxiosRequestConfig } from 'axios';
 
+export type FetchResponse<T> = {
+  count: number;
+  results: T[];
+};
+
 const axiosInstance = axios.create({
   baseURL: 'https://api.rawg.io/api',
   params: {

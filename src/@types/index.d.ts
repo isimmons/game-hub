@@ -25,8 +25,3 @@ type GameQuery = {
   sortOrder: string;
   searchText: string;
 };
-
-type FetchResponse<T> = {
-  count: number;
-  results: T[];
-};
