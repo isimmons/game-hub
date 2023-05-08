@@ -15,3 +15,6 @@ I also added an alias "~" for the root directory. Changes in tsconfig.json and v
 Some variable names and file names may be different but the rest is basically the same as demonstrated in the course.
 
 I'll probably hold off on making more updates until part 2 of the course.
+
+Part II
+updated all dependencies to latest as of May 8, 2023
