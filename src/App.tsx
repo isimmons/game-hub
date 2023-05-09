@@ -12,11 +12,11 @@ function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
   const handleSelectGenre = (genre: Genre) => {
-    setGameQuery({ ...gameQuery, genre });
+    setGameQuery({ ...gameQuery, genreId: genre.id });
   };
 
   const handleSelectPlatform = (platform: Platform) => {
-    setGameQuery({ ...gameQuery, platform });
+    setGameQuery({ ...gameQuery, platformId: platform.id });
   };
 
   const handleOrderBy = (sortOrder: string) => {
@@ -45,7 +45,7 @@ function App() {
         <GridItem area="aside" paddingX={5}>
           <GenreList
             onSelectGenre={handleSelectGenre}
-            selectedGenre={gameQuery.genre}
+            selectedGenreId={gameQuery.genreId}
           />
         </GridItem>
       </Show>
@@ -55,7 +55,7 @@ function App() {
           <HStack spacing={5}>
             <PlatformSelector
               onSelectPlatform={handleSelectPlatform}
-              selectedPlatform={gameQuery.platform}
+              selectedPlatformId={gameQuery.platformId}
             />
             <SortSelector
               sortOrder={gameQuery.sortOrder}

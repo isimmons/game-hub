@@ -20,8 +20,8 @@ type Genre = {
 };
 
 type GameQuery = {
-  genre: Genre;
-  platform: Platform;
+  genreId?: number;
+  platformId?: number;
   sortOrder: string;
   searchText: string;
 };
