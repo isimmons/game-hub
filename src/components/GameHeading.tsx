@@ -5,10 +5,10 @@ import useGameQueryStore from '~/store';
 
 const GameHeading = () => {
   const genreId = useGameQueryStore((s) => s.gameQuery.genreId);
-  const genre = useGenre(genreId);
-
   const platformId = useGameQueryStore((s) => s.gameQuery.platformId);
-  const platform = usePlatform(platformId);
+
+  const genre = genreId ? useGenre(genreId) : null;
+  const platform = platformId ? usePlatform(platformId) : null;
 
   const heading = `${platform?.name || ''} ${genre?.name || ''} Games`;
 
