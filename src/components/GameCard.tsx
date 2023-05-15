@@ -16,7 +16,6 @@ const GameCard = ({ game }: Props) => {
     <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
-        {subTitle && <Heading fontSize="1xl">{subTitle}</Heading>}
         <HStack justifyContent="space-between" marginBottom={3}>
           {game.parent_platforms && (
             <PlatformIconList
@@ -25,10 +24,9 @@ const GameCard = ({ game }: Props) => {
           )}
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Heading fontSize="2xl">
-          {title}
-          <Emoji rating={game.rating_top} />
-        </Heading>
+        <Heading fontSize="2xl">{title}</Heading>
+        {subTitle && <Heading fontSize="1xl">{subTitle}</Heading>}
+        <Emoji rating={game.rating_top} />
       </CardBody>
     </Card>
   );
