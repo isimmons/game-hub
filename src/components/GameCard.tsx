@@ -11,6 +11,7 @@ type Props = {
 
 const GameCard = ({ game }: Props) => {
   const [title, subTitle] = game.name.split(':');
+  console.log(game.parent_platforms ? 'Foo' : 'Bar');
 
   return (
     <Card>

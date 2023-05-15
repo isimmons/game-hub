@@ -18,10 +18,3 @@ type Genre = {
   name: string;
   image_background: string;
 };
-
-type GameQuery = {
-  genreId?: number;
-  platformId?: number;
-  sortOrder: string;
-  searchText: string;
-};
