@@ -29,10 +29,14 @@ class APIClient<T> {
       });
   };
 
-  get = (id: number | string) => {
+  getBySlug = (slug: string) => {
     return axiosInstance
-      .get<T>(this.endpoint + '/' + id)
+      .get<T>(`this.endpoint/${slug}`)
       .then((res) => res.data);
+  };
+
+  getById = (id: number | string) => {
+    return axiosInstance.get<T>(`this.endpoint/${id}`).then((res) => res.data);
   };
 }
 
