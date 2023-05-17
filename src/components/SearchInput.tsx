@@ -5,10 +5,12 @@ import { BsSearch } from 'react-icons/bs';
 import useGameQueryStore from '~/store';
 
 import type { FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SearchInput = () => {
   const setSearchText = useGameQueryStore((s) => s.setSearchText);
   const searchRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -18,6 +20,8 @@ const SearchInput = () => {
     setSearchText(searchRef.current.value);
 
     searchRef.current.value = '';
+
+    navigate('/');
   };
 
   return (
