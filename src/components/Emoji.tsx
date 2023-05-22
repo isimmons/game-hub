@@ -1,6 +1,6 @@
 import { Image } from '@chakra-ui/react';
 
-import bullsEye from '~/assets/emojis/bulls-eye.webp';
+import bullsEye from '~/assets/emojis/bulls-Eye.webp';
 import thumbsUp from '~/assets/emojis/thumbs-up.webp';
 import meh from '~/assets/emojis/meh.webp';
 
